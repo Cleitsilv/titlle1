@@ -1,55 +1,82 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-	<meta charset="UTF-8">
-	<title>Centralizador de Formulários</title>
-	<style type="text/css">
-		body {
-			background-image: url("https://mundodoaredarefrigeracao.com.br/wp-content/uploads/2019/06/gera%C3%A7%C3%A3o-de-energia.jpg");
-			background-repeat: no-repeat;
-			background-size: cover;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			height: 100vh;
-		}
-		h1 {
-			color: rgb(252, 228, 13);
-			text-align: center;
-		}
-		nav#menu li {
-			background-color: orange;
-			padding: 10px;
-			margin: 15px;
-			text-align: center;
-		}
-		nav#menu {
-			display: block;
-			text-align: center;
-		}
-		nav#menu ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-		}
-		nav#menu ul li {
-			display: block;
-			margin: 10px;
-		}
-		a {
-			color: black;
-			text-decoration: none;
-		}
-	</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Centralizador de formulários de serviços e inspeções.">
+  <title>Centralizador de Formulários</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { font-family: Arial, Helvetica, sans-serif; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      background:
+        linear-gradient(rgba(0,0,0,.68), rgba(0,0,0,.68)),
+        url("https://mundodoaredarefrigeracao.com.br/wp-content/uploads/2019/06/gera%C3%A7%C3%A3o-de-energia.jpg") center/cover no-repeat fixed;
+    }
+    main {
+      width: 100%;
+      max-width: 620px;
+      padding: 28px;
+      border-radius: 16px;
+      background: rgba(18,18,18,.88);
+      box-shadow: 0 12px 30px rgba(0,0,0,.35);
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 10px;
+      color: #ffd54a;
+      font-size: clamp(1.7rem, 5vw, 2.4rem);
+    }
+    p { margin: 0 0 24px; line-height: 1.5; color: #eee; }
+    ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+    .button {
+      display: block;
+      width: 100%;
+      padding: 16px 18px;
+      border-radius: 10px;
+      background: #f59e0b;
+      color: #171717;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform .15s ease, background-color .15s ease;
+    }
+    .button:hover, .button:focus-visible {
+      background: #fbbf24;
+      transform: translateY(-1px);
+      outline: 3px solid rgba(255,255,255,.75);
+      outline-offset: 2px;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 24px;
+      color: #fff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    @media (max-width: 480px) {
+      body { padding: 14px; background-attachment: scroll; }
+      main { padding: 22px 16px; border-radius: 12px; }
+      .button { padding: 16px 14px; font-size: .98rem; }
+    }
+</style>
 </head>
 <body>
-	<h1>Bem-vindo ao Centralizador de Formulário</h1>
-	<nav id="menu">
-		<ul>
-			<li><a href="SERV.html">SERVIÇOS</a></li>
-			<li><a href="INSP.html">INSPEÇÕES</a></li>
-		</ul>
-	</nav>
+  <main>
+    <h1>Centralizador de Formulários</h1>
+    <p>Selecione a categoria que deseja acessar.</p>
+    <nav aria-label="Categorias de formulários">
+      <ul>
+        <li><a class="button" href="SERV.html">Serviços</a></li>
+        <li><a class="button" href="INSP.html">Inspeções</a></li>
+      </ul>
+    </nav>
+  </main>
 </body>
 </html>
